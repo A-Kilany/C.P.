@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+
+  <head>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="icon" href="https://i.ibb.co/BPR45yd/favicon.png">
+    <meta charset="utf-8">
+    <title>CP - Analysis</title>
+  </head>
+
+
+
+  <body>
+
+    <head>
+      <script type="text/javascript" src="jquery.min.js"></script>
+    </head>
+
+<center>
+
+
+
+<nav class="MenuBar">
+
+  <div class="Home">
+    <a href="CoronaPost.html">
+      <img class="HomePic" src="https://assets.website-files.com/5d9ba0eb5f6edb77992a99d0/5e6a4e238d0f2c0f426797ca_iconfinder_hygiene-14_4443503.png" alt="HomeIcon">
+    </a>  </div>
+
+  <div class="GermanButton">
+  <a class="link" href="Analyse.HTML"><h1> <br> DEUTSCH</h1></a>
+  </div>
+
+  <div class="Menu" onclick="ToggleNav()">
+    <div id="SideMenu">
+      <ul id="slide">
+            <li><a href="Contact.html" class="bn">CONTACT US</a></li>
+            <li><a href="GI.html" class="bn">GERMANY INFO</a></li>
+            <li><a href="Analysis.html" class="bn">ANALYSIS</a></li>
+      </ul>
+    </div>
+    <img src="https://img.icons8.com/carbon-copy/2x/menu.png" alt="MenuIcon">
+  </div>
+
+</nav>
+
+
+<script>
+
+  function ToggleNav(){
+    document.getElementById("SideMenu").classList.toggle('active');
+  }
+
+</script>
+
+
+
+
+
+
+
+
+  <div class="CoronaPic1">
+    <img class="F1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/597px-SARS-CoV-2_without_background.png" alt="CoronaPic">
+  </div>
+
+  <div class="CoronaPic2">
+    <img class="F2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/597px-SARS-CoV-2_without_background.png" alt="CoronaPic">
+  </div>
+
+  <div class="CoronaPic3">
+    <img class="F3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/597px-SARS-CoV-2_without_background.png" alt="CoronaPic">
+  </div>
+
+  <div class="CoronaPic4">
+    <img class="F4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/597px-SARS-CoV-2_without_background.png" alt="CoronaPic">
+  </div>
+
+  <div class="CoronaPic5">
+    <img class="F5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/597px-SARS-CoV-2_without_background.png" alt="CoronaPic">
+  </div>
+
+  <div class="CoronaPic6">
+    <img class="F6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/597px-SARS-CoV-2_without_background.png" alt="CoronaPic">
+  </div>
+
+  <div class="CoronaPic7">
+    <img class="F7" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/597px-SARS-CoV-2_without_background.png" alt="CoronaPic">
+  </div>
+
+
+
+
+
+<section class="AS">
+
+<input type="file" id="csvfile"  class="btn11" accept=".csv" required />
+
+<br><br>
+
+<div class="list5">
+
+<button class="btn5" onclick="calculateMean()">Mean</button>
+<button class="btn5" onclick="calculateMedian()">Median</button>
+<button class="btn5" onclick="calculateVariance()">Variance</button>
+<button class="btn5" onclick="calculateStdDev()">Standard deviation</button>
+<button class="btn5" onclick="calculateMin()">Minimum</button>
+<button class="btn5" onclick="calculateMax()">Maximum</button>
+<button class="btn5" onclick="calculateAccData()">Accumulated Data</button>
+<button class="btn5" onclick="calculateRange()">Range</button>
+
+</div>
+
+<br><br>
+<strong id="output" class="result"></strong>
+<br><br>
+
+<center>
+
+<table id="parsed_csv_list" class="content-table">
+<tr>
+<th title="Field #1">#</th>
+<th title="Field #2">Date</th>
+<th title="Field #3">Day</th>
+<th title="Field #4">Month</th>
+<th title="Field #5">Year</th>
+<th title="Field #6">Cases</th>
+<th title="Field #7">Deaths</th>
+<th title="Field #8">Country</th>
+<th title="Field #9">Code</th>
+<th title="Field #10">Population</th>
+<th title="Field #11">ContinentExp</th>
+<th title="Field #12">Cases_cum</th>
+<th title="Field #13">Deaths_cum</th>
+</tr>
+</table>
+
+</center>
+
+
+</section>
+
+</body>
+<script>
+	var x = []
+	function myMean(x) {
+		var total = 0;
+		for (var i = 0; i < x.length; i++) {
+			total += x[i];
+		}
+		return (total/x.length);
+	}
+
+	function myMaxValue() {
+		var max = x[0];
+		for (var i = 1; i < x.length; i++) {
+			if(x[i] > max) {
+				max = x[i];
+			}
+		}
+		return max;
+	}
+
+	function myMinValue(x) {
+		var min = x[0];
+		for (var i = 1; i < x.length; i++) {
+			if(x[i] < min) {
+				min = x[i];
+			}
+		}
+		return min;
+	}
+
+	function myRangeValue(x) {
+		return myMaxValue(x) - myMinValue(x);
+	}
+
+	function myAcumalted(x) {
+		var a = [];
+		var sum = 0;
+		for (var i = 0; i < x.length; i++) {
+			sum += x[i];
+			a[i] = sum;
+		}
+		return a;
+	}
+
+	function myMedianValue(x) {
+		x.sort();
+		if(x.length%2 == 0)
+			return (x[parseInt(x.length/2)] + x[parseInt(x.length/2) - 1]) / 2.0;
+		else
+			return x[parseInt(x.length/2)];
+	}
+
+	function myVarianceValue(x) {
+		var mean = myMean(x);
+		var temp = 0;
+		for (var i = 0; i < x.length; i++) {
+			temp += Math.pow(x[i] - mean, 2);
+		}
+		return Math.sqrt(temp/x.length - 1);
+	}
+
+	function myStddeviationValue(x) {
+		var mean = myMean(x);
+		var temp = 0;
+		for (var i = 0; i < x.length; i++) {
+			temp += Math.pow(x[i] - mean, 2);
+		}
+		return Math.sqrt(temp/x.length);
+	}
+
+	function calculateMean() {
+		document.getElementById('output').innerHTML = "Mean: " + myMean(x);
+	}
+
+	function calculateMedian() {
+		document.getElementById('output').innerHTML = "Median: " + myMedianValue(x);
+	}
+
+	function calculateVariance() {
+		document.getElementById('output').innerHTML = "Variance: " + myVarianceValue(x);
+	}
+
+	function calculateStdDev() {
+		document.getElementById('output').innerHTML = "Standard deviation: " + myStddeviationValue(x);
+	}
+
+	function calculateRange() {
+		document.getElementById('output').innerHTML = "Range: " + myRangeValue(x);
+	}
+
+	function calculateMax() {
+		document.getElementById('output').innerHTML = "Maximum value: " + myMaxValue(x);
+	}
+
+	function calculateMin() {
+		document.getElementById('output').innerHTML = "Minimum value: " + myMinValue(x);
+	}
+
+	function calculateAccData() {
+		document.getElementById('output').innerHTML = "Accumulated Data: " + myAcumalted(x);
+	}
+
+	function displayHTMLTable(data){
+		var table = "";
+		console.log(data)
+		for(i=0;i<data.length;i++){
+			if(i == 0)
+				continue
+			table+= "<tr>";
+			var row = data[i];
+			var cells = row.split(",");
+			for(j=0;j<cells.length;j++){
+				table+= "<td>";
+				table+= cells[j];
+				table+= "</td>";
+				if(j == 5)
+					x.push(parseInt(cells[j]))
+			}
+			table+= "</tr>";
+		}
+		$('#parsed_csv_list').append(table);
+	}
+
+	function readSingleFile(evt) {
+		var f = evt.target.files[0];
+		if (f) {
+			var r = new FileReader();
+			r.onload = function(e) {
+				var contents = e.target.result;
+				displayHTMLTable(contents.split("\n"))
+			}
+			r.readAsText(f);
+		} else {
+			alert("Failed to load file");
+		}
+	}
+
+	document.getElementById('csvfile').addEventListener('change', readSingleFile);
+
+
+
+</script>
+</html>

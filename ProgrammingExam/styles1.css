@@ -1,0 +1,932 @@
+/******************************General CSS*******************************/
+
+
+
+body {
+  background: linear-gradient(90deg, black, #333333, #706c61, white);
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+hr {
+  border-style: dotted none none;
+  border-color: white;
+  border-width: 4px;
+  width: 85%;
+    }
+
+
+
+
+.MenuBar {
+  position: fixed;
+  width: 100%;
+  height: 130px;
+  background-color: #cfb495;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: .7;
+}
+.MenuBar:hover {
+  opacity: 1;
+}
+
+.Home {
+  float: left;
+  position: fixed;
+  top: 7px;
+  left: 17px;
+  width: 125px;
+  height: 125px;
+}
+.HomePic {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.HomePic:hover {
+  opacity: 1;
+}
+
+.GermanButton {
+  position: fixed;
+  border: 3px solid #cedcc3;
+  background-color: #cedcc3;
+  right: 30px;
+  top: 20px;
+  float: right;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 1s ease-out;
+}
+.GermanButton a {
+  text-decoration: none;
+}
+.GermanButton h1 {
+  display: block;
+  padding-left: 1.5px;
+  padding-top: 13px;
+  text-align: center;
+  color: black;
+  font-size: 100%;
+  font-family: serif;
+}
+.GermanButton:hover {
+  border: 3px solid white;
+  background-image: url("https://cdn.countryflags.com/thumbs/germany/flag-3d-round-250.png");
+  background-size: 100%;
+  transform: rotateZ(180deg);
+}
+
+
+.EnglishButton {
+  position: fixed;
+  border: 3px solid #cedcc3;
+  background-color: #cedcc3;
+  right: 30px;
+  top: 20px;
+  float: right;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 1s ease-out;
+}
+.EnglishButton h1 {
+  display: block;
+  padding-left: 1.5px;
+  padding-top: 13px;
+  text-decoration: none;
+  position: fixed;
+  text-align: center;
+  color: black;
+  font-size: 115%;
+  font-family: serif;
+}
+.EnglishButton:hover {
+  border: 3px solid white;
+  background-image: url("https://cdn.countryflags.com/thumbs/united-kingdom/flag-3d-round-250.png");
+  background-size: 100%;
+  transform: rotateZ(180deg);
+}
+
+
+.Menu {
+  position: fixed;
+  left: 150px;
+  top: -20px;
+  width: 170px;
+  height: 170px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.Menu img {
+  width: 100%;
+  height: 100%;
+}
+.Menu img:hover {
+  cursor: pointer;
+}
+
+#SideMenu {
+  position: absolute;
+  top: -160px;
+  left: 130px;
+  width: 750px;
+  height: 132px;
+  background: none;
+  z-index: 10;
+  display: table;
+  color: white;
+  margin: 0 auto;
+}
+ul#slide {
+  min-width: 750px;
+	list-style: none;
+	padding-top: 20px;
+}
+ul#slide li {
+  display: inline;
+}
+ul#slide li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.bn {
+  text-align: center;
+  background: none;
+  padding: 86px 40px;
+  padding-bottom: 50px;
+  width: 52%;
+  height: 40%;
+  font-size: 22px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 7px;
+  transition: 0.5s;
+  outline: none;
+}
+.bn:hover {
+  background-color: white;
+}
+
+#SideMenu.active {
+  transition: 0.6s;
+  top: 55px;
+}
+
+
+
+.CoronaPic1 {
+  position: absolute;
+  left: 80px;
+  top: 200px;
+  z-index: -20;
+}
+.F1 {
+  width: 140px;
+	height: 140px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float1 5s ease-in-out infinite;
+}
+@keyframes float1 {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-35px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+.CoronaPic2 {
+  position: absolute;
+  left: 480px;
+  top: 380px;
+  z-index: -20;
+  opacity: .9;
+}
+.F2 {
+  width: 100px;
+	height: 100px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float2 6.5s ease-in-out infinite;
+  z-index: -20;
+}
+@keyframes float2 {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-29px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+.CoronaPic3 {
+  position: absolute;
+  right: 240px;
+  top: 400px;
+  z-index: -20;
+  opacity: .8;
+}
+.F3 {
+  width: 80px;
+	height: 80px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float3 5s ease-in-out infinite;
+}
+@keyframes float3 {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-24px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+.CoronaPic4 {
+  position: absolute;
+  right: 50px;
+  top: 200px;
+  z-index: -20;
+}
+.F4 {
+  width: 120px;
+	height: 120px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+	transform: translatey(0px);
+	animation: float4 6s ease-in-out infinite;
+}
+@keyframes float4 {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.1);
+		transform: translatey(-30px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+		transform: translatey(0px);
+	}
+}
+.CoronaPic5 {
+  position: absolute;
+  right: 400px;
+  top: 280px;
+  z-index: -20;
+  opacity: .7;
+}
+.F5 {
+  width: 66px;
+	height: 66px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float5 5.5s ease-in-out infinite;
+}
+@keyframes float5 {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+.CoronaPic6 {
+  position: absolute;
+  left: 350px;
+  top: 230px;
+  z-index: -20;
+  opacity: .7;
+}
+.F6 {
+  width: 70px;
+	height: 70px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float6 6.8s ease-in-out infinite;
+}
+@keyframes float6 {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-35px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+.CoronaPic7 {
+  position: absolute;
+  left: 750px;
+  top: 170px;
+  z-index: -20;
+  opacity: .7;
+}
+.F7 {
+  width: 57px;
+	height: 57px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float7 6s ease-in-out infinite;
+}
+@keyframes float7 {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-25px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+.List1 {
+  width: 40%;
+  position: relative;
+  float: right;
+  right: 2%;
+  top: 500px;
+  z-index: 2;
+}
+
+
+.btn {
+  border: 1px solid black;
+  background-color: #a7b99e;
+  padding: 5px 0;
+  width: 22%;
+  height: 10%;
+  font-size: 17px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 4px;
+  transition: 0.5s;
+  outline: none;
+}
+.btn:hover {
+  color: white;
+  background: black;
+}
+.btn:focus {
+  color: white;
+  background: black;
+}
+
+
+.btn9 {
+  border: 1px solid black;
+  background-color: #a7b99e;
+  padding: 10px 10px;
+  width: 200px;
+  height: 66px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.5s;
+  outline: none;
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+.btn9:hover {
+  color: white;
+  background: black;
+}
+
+
+.TextsDiv{
+  width: 40%;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 500px;
+  right: 1%;
+  margin-bottom: 45px;
+}
+
+#TextDiv p {
+  font-size: 23px;
+  text-align: left;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#TextDiv h2 {
+  font-size: 27px;
+}
+
+
+.List0 {
+  position: absolute;
+  width: 55%;
+  float: left;
+  top: 500px;
+  z-index: 2;
+}
+
+.StatsDiv {
+  width: 55%;
+  height: 500px;
+  background-color: black;
+  position: absolute;
+  top: 500px;
+  left: 1%;
+  z-index: -2;
+  margin-bottom: 45px;
+}
+
+#StatDiv {
+  color: white;
+  font-family: serif;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+#StatDiv h2 {
+  font-size: 28px;
+  text-align: left;
+}
+#StatDiv h3 {
+  font-size: 30px;
+  text-align: left;
+}
+#StatDiv h4 {
+  color: #a7b99e;
+  font-size: 48px;
+  text-align: left;
+}
+#StatDiv h5 {
+  font-size: 24px;
+  text-align: left;
+  font-weight: lighter;
+}
+#StatDiv h6 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: left;
+}
+
+
+
+
+
+
+
+/**************************** Styles specific for Contact ******************************/
+
+
+
+
+
+
+
+.ContactPic {
+  position: absolute;
+  top: 130px;
+  left: 465px;
+  width: 40%;
+  height: auto;
+  border-radius: 10%;
+  z-index: 1000;
+  opacity: .95;
+  z-index: -2;
+}
+
+.ContactIntro h1 {
+  color: white;
+  position: relative;
+  top: 500px;
+  font-size: 60px;
+}
+.ContactIntro p {
+  color: white;
+  position: relative;
+  top: 500px;
+  font-size: 25px;
+}
+
+.OurInfo {
+  position: relative;
+  top: 49px;
+}
+
+.TextsDiv2 {
+  width: 40%;
+  height: 300px;
+  background-color: white;
+}
+.TextsDiv2 p {
+  text-align: left;
+  font-size: 130%;
+  font-family: serif;
+  padding-left: 25px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.wrapper{
+  position: absolute;
+  top: 1600px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 550px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px grey;
+  margin-bottom: 130px;
+}
+
+.wrapper h2{
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #332902;
+}
+
+.wrapper .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field input{
+  transition: 0.4s;
+  height: 50px;
+  font-size: 17px;
+}
+
+.wrapper .input_field input:hover {
+  background-color: black;
+  color: white;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper textarea{
+  resize: none;
+  height: 170px;
+  transition: 0.4s;
+  font-size: 17px;
+}
+
+.wrapper textarea:hover {
+  background-color: black;
+  color: white;
+}
+
+
+#error_message{
+  margin-bottom: 20px;
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+
+.btn4 {
+  border: 1px solid black;
+  background-color: #a7b99e;
+  padding: 5px 0;
+  width: 80%;
+  height: 15%;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 4px;
+  transition: 0.5s;
+  outline: none;
+}
+.btn4:hover {
+  color: white;
+  background: black;
+}
+.btn4:focus {
+  color: white;
+  background: black;
+}
+
+
+
+
+
+
+
+/************************** Styles specific to GI *****************************/
+
+
+
+
+
+
+.GI {
+  position: relative;
+  top: 200px;
+  width: 50%;
+  height: 450px;
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+  border: 0;
+}
+.GI img {
+  width: 25%;
+  height: auto;
+}
+
+.List3 {
+  width: 65%;
+  position: relative;
+  float: left;
+  left: 17.5%;
+  top: 205px;
+  z-index: 2;
+}
+
+.btn0 {
+  border: 1px solid black;
+  width: 12%;
+  height: 44px;
+  background-color: #a7b99e;
+  padding: 4px 0;
+  font-size: 14px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 3px;
+  transition: 0.5s;
+  outline: none;
+}
+
+.btn0:hover {
+  color: white;
+  background: black;
+}
+
+.btn0:focus {
+  color: white;
+  background: black;
+}
+
+
+#GIDiv {
+  color: black;
+  font-family: serif;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+#GIDiv h1 {
+  font-size: 27px;
+  font-weight: lighter;
+  text-align: left;
+}
+#GIDiv h2 {
+  font-size: 30px;
+}
+#GIDiv h3 {
+  font-size: 26px;
+  text-align: left;
+}
+#GIDiv h4 {
+  color: #00454a;
+  font-size: 34px;
+  text-align: left;
+}
+#GIDiv h5 {
+  font-size: 22px;
+  text-align: left;
+  font-weight: lighter;
+}
+#GIDiv h6 {
+  font-size: 17px;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: left;
+}
+
+
+.Analysiss {
+  position: relative;
+  top: 200px;
+  width: 54%;
+  height: 450px;
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+  border: 0;
+}
+
+
+.GI5 {
+  position: relative;
+  top: 400px;
+  width: 80%;
+  height: 70px;
+  background-color: none;
+  border-radius: 45%;
+  font-size: 150%;
+  color: white;
+}
+
+.content-table {
+    text-align: center;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    cursor: default;
+  }
+
+.content-table tbody tr:hover{
+    color: red;
+}
+
+  .content-table thead tr {
+
+    background-color: #cfb495;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+
+  }
+
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid skyblue;
+  }
+
+table {
+
+    position:relative;
+    top: 420px;
+    color: black;
+    background-color: white;
+}
+
+
+
+
+/******************** Styles specific to Analysis page *******************/
+
+
+
+
+.AS {
+  position: relative;
+  top: 300px;
+  width: 900px;
+  height: 400px;
+  background-color: #ffd8a6;
+  border-radius: 20%;
+}
+
+.list5 {
+  width: 80%;
+  position: relative;
+  float: left;
+  top: 20px;
+  left: 100px;
+  z-index: 2;
+  color: black;
+}
+.list5 p {
+  width: 20%;
+  height: 20%;
+}
+
+.btn5 {
+border: 1px solid black;
+width: 35%;
+height: 48px;
+background-color: #a7b99e;
+padding: 4px 0;
+font-size: 18px;
+font-family: "montserrat";
+cursor: pointer;
+margin: 3px;
+transition: 0.5s;
+outline: none;
+margin-bottom: 25px;
+}
+
+#parsed_csv_list {
+  position: absolute;
+  left: -75px;
+}
+
+.btn11 {
+background-color: black;
+color: white;
+padding: 5px 0;
+width: 33%;
+height: 10%;
+font-size: 17px;
+font-family: "montserrat";
+cursor: pointer;
+margin: 4px;
+transition: 0.5s;
+outline: none;
+border-radius: 10%;
+}
+
+.btn11:hover {
+  background-color: white;
+  color: black;
+}
